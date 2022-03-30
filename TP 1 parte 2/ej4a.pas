@@ -10,7 +10,7 @@ el número 0, el cual no debe procesarse
 }
 
 var
-    num, min1, min2, aux :integer;
+    num, min1, min2 :integer;
     cont :word;
     
 begin
@@ -26,17 +26,16 @@ begin
         else
             if cont = 2 then  // inicializa min2
                 if num<min1 then begin // mantiene el mas chico en min1
-                    aux := min1;
+                    min2 := min1;
                     min1 := num;
-                    min2 := aux;
+                    
                 end
                 else
                     min2 := num
             else
                 if num < min1 then begin
-                    aux := min1;
+                    min2 := min1;
                     min1 := num;
-                    min2 := aux;
                 end
                 else
                     if num < min2 then
