@@ -6,7 +6,6 @@ ingrese el número 100, el cual debe procesarse. Informar en pantalla:
 ◦ El número máximo leído.
 ◦ El número mínimo leído.
 ◦ La suma total de los números leídos.
-
 }
 
 var
@@ -15,25 +14,21 @@ var
     
 begin
 
-    primera := true;
+    max := -32768;
+    min := 32767;
+    suma := 0;
     
     repeat
         writeln('Ingrese numero:');readln(num);
-        if primera then begin
-            max := num;
-            min := num;
-            suma := num;
-            primera := false;
-        end
-            else
-                begin
-                    if num > max then
-                        max:=num
-                    else
-                        if num < min then
-                            min:=num;
-                    suma := suma + num;
-                end;
+
+        if num > max then
+            max:=num
+        else
+            if num < min then
+                min:=num;
+                
+        suma := suma + num;
+
     until (num = 100);
 
     writeln('Maximo: ',max);
